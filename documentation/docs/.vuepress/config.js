@@ -3,6 +3,7 @@ const path = require('path');
 module.exports = {
   title: 'Vue3-XLSX',
   description: 'XLSX made friendly by Vue 3',
+  base: '/vue3-xlsx/',
   dest: './../docs',
   themeConfig: {
     repo: 'joaomede/vue3-xlsx',
