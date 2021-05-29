@@ -21,9 +21,9 @@
     "prepare": "npm run build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
-    "docs:prepare": "yarn prepare && rm -rf docs/dist/ && mkdir docs/dist/ && cp -r dist docs/",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "yarn docs:prepare && vuepress build docs",
+    "docs:prepare": "yarn prepare && rm -rf documentation/docs/dist/ && mkdir documentation/docs/dist/ && cp -r dist documentation/docs/",
+    "docs:dev": "cd documentation && yarn docs:dev",
+    "docs:build": "yarn docs:prepare && cd documentation && yarn docs:build",
     "commit": "git-cz",
     "release": "standard-version && git push --tags"
   },
@@ -50,7 +50,6 @@
     "@vue/eslint-config-standard": "^5.1.2",
     "@vue/eslint-config-typescript": "^7.0.0",
     "@vue/test-utils": "^1.0.0-beta.20",
-    "@vuepress/plugin-google-analytics": "^1.0.0-alpha.44",
     "babel-loader": "^8.2.2",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
@@ -72,8 +71,7 @@
     "rollup-plugin-vue": "^6.0.0",
     "typescript": "^4.3.2",
     "vue-jest": "^3.0.7",
-    "vue-template-compiler": "^2.6.10",
-    "vuepress": "^0.14.11"
+    "vue-template-compiler": "^2.6.10"
   },
   "resolutions": {
     "webpack-dev-middleware": "3.6.0"

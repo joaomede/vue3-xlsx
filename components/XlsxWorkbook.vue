@@ -1,8 +1,7 @@
 <script lang="jsx">
-import { defineComponent } from 'vue'
 import WorkbookHandler from './mixins/WorkbookHandler'
 
-export default defineComponent({
+export default {
   mixins: [WorkbookHandler],
   provide () {
     return {
@@ -50,5 +49,5 @@ export default defineComponent({
     }
     return null
   }
-})
+}
 </script>
