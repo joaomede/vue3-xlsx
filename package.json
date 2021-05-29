@@ -1,0 +1,109 @@
+{
+  "name": "vue-xlsx",
+  "version": "1.0.0",
+  "private": false,
+  "author": {
+    "name": "Nicolo Maria Mezzopera",
+    "email": "nicolo.mezzopera@gmail.com",
+    "url": "donnico.dev"
+  },
+  "main": "dist/vue3-xlsx.cjs.prod.js",
+  "module": "dist/vue3-xlsx.ems.js",
+  "typings": "dist/index.d.ts",
+  "unpkg": "dist/vue-xlsx.umd.js",
+  "files": [
+    "dist/"
+  ],
+  "homepage": "https://joaomede.github.io/vue3-xlsx",
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "rimraf dist && rollup --config rollup.config.js",
+    "prepare": "npm run build",
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit",
+    "docs:prepare": "yarn prepare && rm -rf docs/dist/ && mkdir docs/dist/ && cp -r dist docs/",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "yarn docs:prepare && vuepress build docs",
+    "commit": "git-cz",
+    "release": "standard-version && git push --tags"
+  },
+  "dependencies": {
+    "core-js": "^3.13.1",
+    "vue": "^3.0.11",
+    "xlsx": "^0.14.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@types/jest": "^26.0.23",
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0",
+    "@vue/babel-plugin-jsx": "^1.0.6",
+    "@vue/cli-plugin-babel": "^4.5.13",
+    "@vue/cli-plugin-eslint": "^4.5.13",
+    "@vue/cli-plugin-typescript": "^4.5.13",
+    "@vue/cli-plugin-unit-jest": "^4.5.13",
+    "@vue/cli-service": "^4.5.13",
+    "@vue/compiler-sfc": "^3.0.11",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "@vue/test-utils": "^1.0.0-beta.20",
+    "@vuepress/plugin-google-analytics": "^1.0.0-alpha.44",
+    "babel-loader": "^8.2.2",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^7.0.0",
+    "git-cz": "^4.7.6",
+    "husky": "^6.0.0",
+    "rollup": "^2.50.4",
+    "rollup-copy-plugin": "^0.1.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "rollup-plugin-vue": "^6.0.0",
+    "typescript": "^4.3.2",
+    "vue-jest": "^3.0.7",
+    "vue-template-compiler": "^2.6.10",
+    "vuepress": "^0.14.11"
+  },
+  "resolutions": {
+    "webpack-dev-middleware": "3.6.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "keywords": [
+    "vue",
+    "xlsx",
+    "vuejs"
+  ],
+  "license": "MIT",
+  "lint-staged": {
+    "*.js": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
+  "sideEffects": [
+    "polyfills.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/joaomede/vue3-xlsx.git"
+  }
+}
