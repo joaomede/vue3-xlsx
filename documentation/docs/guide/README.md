@@ -2,21 +2,21 @@
 
 ## Installation
 
-`vue-xlsx` is released on npm so:
+`vue3-xlsx` is released on npm so:
 
 ```bash
-npm install -save vue-xlsx
+npm install -save vue3-xlsx
 ```
 
 or
 
 ```bash
-yarn add vue-xlsx
+yarn add vue3-xlsx
 ```
 
 ## Quick Start
 
-`vue-xlsx` uses a completely modular approach, you can mix and match our components however you want to.
+`vue3-xlsx` uses a completely modular approach, you can mix and match our components however you want to.
 The only rule is that `importing` components must not be mixed with `exporting` components
 
 ### Importing an XLSX file

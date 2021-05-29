@@ -13,7 +13,6 @@
     "markdown-it-katex": "^2.0.3"
   },
   "devDependencies": {
-    "vue-server-renderer": "^2.6.12",
     "vuepress": "^0.14.11"
   }
 }

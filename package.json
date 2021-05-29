@@ -1,5 +1,5 @@
 {
-  "name": "vue-xlsx",
+  "name": "vue3-xlsx",
   "version": "1.1.0",
   "private": false,
   "author": {
@@ -10,7 +10,6 @@
   "main": "dist/vue3-xlsx.cjs.prod.js",
   "module": "dist/vue3-xlsx.ems.js",
   "typings": "dist/index.d.ts",
-  "unpkg": "dist/vue-xlsx.umd.js",
   "files": [
     "dist/"
   ],
