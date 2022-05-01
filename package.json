@@ -8,7 +8,7 @@
     "url": "donnico.dev"
   },
   "main": "dist/vue3-xlsx.cjs.prod.js",
-  "module": "dist/vue3-xlsx.ems.js",
+  "module": "dist/vue3-xlsx.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist/"
